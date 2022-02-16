@@ -1,0 +1,41 @@
+Sun Oct 17 01:34:28 AM PDT 2021
+*** compiling with clang++ to create an executable called myprogram
+Ubuntu clang version 13.0.0-2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+*** running clang-tidy using options from .clang-tidy
+LLVM (http://llvm.org/):
+  LLVM version 13.0.0
+  
+  Optimized build.
+  Default target: x86_64-pc-linux-gnu
+  Host CPU: skylake
+*** running myprogram
+test1 complete
+test2 complete
+test3 complete
+test4 complete
+Done.
+*** running with valgrind
+==35112== Memcheck, a memory error detector
+==35112== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==35112== Using Valgrind-3.17.0 and LibVEX; rerun with -h for copyright info
+==35112== Command: ./myprogram
+==35112== 
+test1 complete
+test2 complete
+test3 complete
+test4 complete
+Done.
+==35112== 
+==35112== HEAP SUMMARY:
+==35112==     in use at exit: 0 bytes in 0 blocks
+==35112==   total heap usage: 2 allocs, 2 frees, 76,800 bytes allocated
+==35112== 
+==35112== All heap blocks were freed -- no leaks are possible
+==35112== 
+==35112== For lists of detected and suppressed errors, rerun with: -s
+==35112== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+*** cleaning up, deleting myprogram
+Sun Oct 17 01:34:32 AM PDT 2021
