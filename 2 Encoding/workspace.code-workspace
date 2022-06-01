@@ -1,0 +1,47 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../../../Backups/Schoolwork Archives/UW/CSS342"
+		}
+	],
+   "settings": {
+      "files.associations": {
+         "memory": "cpp",
+         "vector": "cpp",
+         "ostream": "cpp",
+         "*.tcc": "cpp",
+         "string": "cpp",
+         "iosfwd": "cpp",
+         "random": "cpp",
+         "iostream": "cpp"
+      }
+   },
+   "launch": {
+      "version": "0.2.0",
+      "configurations": [
+      
+         {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+               {
+                  "description": "Enable pretty-printing for gdb",
+                  "text": "-enable-pretty-printing",
+                  "ignoreFailures": true
+               }
+            ]
+         }
+      ]
+   }
+}

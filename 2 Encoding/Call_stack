@@ -1,0 +1,15 @@
+here is the crash call stack...looks like happening in the constructor for your encoder:
+```c++
+0   hg                            	       0x10477e168 std::__1::shared_ptr<HuffNode>::shared_ptr(std::__1::shared_ptr<HuffNode>&&) + 20
+1   hg                            	       0x10477e144 std::__1::shared_ptr<HuffNode>::shared_ptr(std::__1::shared_ptr<HuffNode>&&) + 36
+2   hg                            	       0x10477a9e8 std::__1::shared_ptr<HuffNode>::operator=(std::__1::shared_ptr<HuffNode>&&) + 52
+3   hg                            	       0x10477f0e0 std::__1::shared_ptr<HuffNode>* std::__1::__move_constexpr<std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*>(std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*) + 60
+4   hg                            	       0x10477f098 std::__1::shared_ptr<HuffNode>* std::__1::__move<std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*>(std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*) + 40
+5   hg                            	       0x10477eee4 std::__1::shared_ptr<HuffNode>* std::__1::move<std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*>(std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*, std::__1::shared_ptr<HuffNode>*) + 72
+6   hg                            	       0x1047798f8 std::__1::vector<std::__1::shared_ptr<HuffNode>, std::__1::allocator<std::__1::shared_ptr<HuffNode> > >::erase(std::__1::__wrap_iter<std::__1::shared_ptr<HuffNode> const*>) + 104
+7   hg                            	       0x104778e80 Encoder::Encoder(std::__1::shared_ptr<std::__1::vector<int, std::__1::allocator<int> > >) + 948
+8   hg                            	       0x104779bc8 Encoder::Encoder(std::__1::shared_ptr<std::__1::vector<int, std::__1::allocator<int> > >) + 28
+9   hg                            	       0x10478326c testCase(int, int, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, bool) + 200
+10  hg                            	       0x1047837f8 main + 280
+11  dyld                          	       0x1049010f4 start + 520
+```
