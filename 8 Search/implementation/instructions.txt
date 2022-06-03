@@ -1,0 +1,4 @@
+
+Given a binary search tree and a number n, find the node in the tree that contains the largest number 
+that is less than n.  If there is no value in the tree less than n then return nullptr.  The binary search tree 
+over which you will search will be given as a parameter.
